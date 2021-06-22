@@ -58,10 +58,10 @@ let vowelBonusScore =  function(word) {
     
 
 
-let scrabbleScore = (word) => {
+let scrabbleScore = function(word){
   let score = 0;
-  word.split('').forEach((letter) => {
-   score += newPointStructure[letter.toUpperCase()]
+  word.split('').forEach( function(letter) {
+   score += newPointStructure[letter.toLowerCase()]
   })
   return score;
 };
