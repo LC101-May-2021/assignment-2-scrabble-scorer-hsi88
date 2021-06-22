@@ -69,9 +69,9 @@ let scrabbleScore = (word) => {
 
 function transform(obj){
   const newObj = {};
-  for (const key in obj) {
-    obj[key].forEach(function(item){
-      newObj[item] = Number(key);
+  for (const score in obj) {
+    obj[score].forEach(function(letter){
+      newObj[letter.toLowerCase()] = Number(score);
     })
   }
   return newObj; 
